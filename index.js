@@ -20,14 +20,4 @@ io.on('connection', (socket) => {
     })
 })
 
-io(http, {
-    cors: {
-        origin: "https://express-chat-ncp7.vercel.app/",
-        methods: ["GET", "POST"],
-        transports: ['websocket', 'polling'],
-        credentials: true
-    },
-    allowEIO3: true
-});
-
 app.use(express.static(__dirname + '/assets'))
